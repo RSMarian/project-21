@@ -31,4 +31,8 @@ let futureDate = new Date(2023, 7, 14, 8, 30, 0);
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
-giveaway.textContent = `Giveaway ends on ${year} ${hours}:${minutes}am`;
+
+let month = futureDate.getMonth();
+month = months[month];
+
+giveaway.textContent = `Giveaway ends on ${month} ${year} ${hours}:${minutes}am`;

@@ -26,5 +26,9 @@ const giveaway = document.querySelector(".giveaway");
 const deadline = document.querySelector(".deadline");
 const items = document.querySelectorAll(".deadline-format h4");
 
-let futureDate = new Date(2023, 7, 14, 8, 0, 0);
-console.log(futureDate);
+let futureDate = new Date(2023, 7, 14, 8, 30, 0);
+
+const year = futureDate.getFullYear();
+const hours = futureDate.getHours();
+const minutes = futureDate.getMinutes();
+giveaway.textContent = `Giveaway ends on ${year} ${hours}:${minutes}am`;
